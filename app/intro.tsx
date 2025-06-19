@@ -76,10 +76,12 @@ export default function IntroScreen() {
         </View>
       )}
       {!isIntro && (
+        <View style={styles.webViewContainer}>
           <WebView
             source={{ uri: "https://lab.alowallet.net/auth/sign-in" }}
-            style={styles.webViewContainer}
+            style={styles.webView}
           />
+        </View>
       )}
     </View>
   );
@@ -101,9 +103,9 @@ const styles = StyleSheet.create({
   webViewContainer: {
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
-    paddingHorizontal: 20,
-    paddingTop: 50,
-    paddingBottom: 20,
+    paddingTop: 30,
+  },
+  webView: {
   },
   logoContainer: {
     justifyContent: "center",
