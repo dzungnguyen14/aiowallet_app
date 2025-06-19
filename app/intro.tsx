@@ -76,12 +76,10 @@ export default function IntroScreen() {
         </View>
       )}
       {!isIntro && (
-        <View style={styles.page} key="2">
           <WebView
             source={{ uri: "https://lab.alowallet.net/auth/sign-in" }}
             style={styles.webViewContainer}
           />
-        </View>
       )}
     </View>
   );
@@ -104,7 +102,8 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
     paddingHorizontal: 20,
-    paddingTop: 20,
+    paddingTop: 50,
+    paddingBottom: 20,
   },
   logoContainer: {
     justifyContent: "center",
@@ -113,21 +112,23 @@ const styles = StyleSheet.create({
     height: Dimensions.get("window").height,
   },
   logo: {
-    width: Dimensions.get("window").width * 0.8,
-    height: 400,
+    width: Dimensions.get("window").width * 0.6,
+    height: 300,
+    resizeMode: "contain",
   },
   introTextContainer: {
     gap: 10,
   },
   WhiteLargeText: {
-    fontSize: 30,
+    fontSize: 26,
     fontWeight: "bold",
     textAlign: "center",
     color: "white",
-    marginBottom: 20
+    marginTop: 30,
+    marginBottom: 10,
   },
   WhiteSmallText: {
-    fontSize: 16,
+    fontSize: 14,
     textAlign: "center",
     color: "white",
   },
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
     height: 20,
   },
   ListFeatureItemText: {
-    fontSize: 16,
+    fontSize: 14,
     color: "white",
   },
   HighlightTextBold: {
@@ -154,13 +155,13 @@ const styles = StyleSheet.create({
   button: {
     borderWidth: 0.5,
     borderColor: "gray",
-    padding: 20,
+    padding: 15,
     width: Dimensions.get("window").width * 0.8,
     borderRadius: 10,
     marginTop: 30,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 16,
     textAlign: "center",
     fontWeight: "bold",
     color: "white",
